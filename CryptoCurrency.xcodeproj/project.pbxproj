@@ -13,6 +13,10 @@
 		5FA4477D24708E48005AA694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA4477B24708E48005AA694 /* Main.storyboard */; };
 		5FA4477F24708E4F005AA694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA4477E24708E4F005AA694 /* Assets.xcassets */; };
 		5FA4478224708E4F005AA694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA4478024708E4F005AA694 /* LaunchScreen.storyboard */; };
+		5FA4478A2470906D005AA694 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA447892470906D005AA694 /* CryptoTableViewCell.swift */; };
+		5FA447902470921D005AA694 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4478F2470921D005AA694 /* CryptoCurrency.swift */; };
+		5FA44792247094F3005AA694 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA44791247094F3005AA694 /* WebService.swift */; };
+		5FA447942470993C005AA694 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA447932470993C005AA694 /* CryptoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5FA4477E24708E4F005AA694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FA4478124708E4F005AA694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FA4478324708E4F005AA694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA447892470906D005AA694 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		5FA4478F2470921D005AA694 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
+		5FA44791247094F3005AA694 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		5FA447932470993C005AA694 /* CryptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +48,8 @@
 		5FA4476924708E47005AA694 = {
 			isa = PBXGroup;
 			children = (
-				5FA4477424708E48005AA694 /* CryptoCurrency */,
 				5FA4477324708E48005AA694 /* Products */,
+				5FA4477424708E48005AA694 /* CryptoCurrency */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +64,51 @@
 		5FA4477424708E48005AA694 /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
-				5FA4477524708E48005AA694 /* AppDelegate.swift */,
-				5FA4477724708E48005AA694 /* SceneDelegate.swift */,
-				5FA4477924708E48005AA694 /* ViewController.swift */,
+				5FA4478E247091F0005AA694 /* Service */,
+				5FA4478D247091E7005AA694 /* ViewModel */,
+				5FA4478C247091DF005AA694 /* View */,
+				5FA4478B247091C7005AA694 /* Model */,
 				5FA4477B24708E48005AA694 /* Main.storyboard */,
 				5FA4477E24708E4F005AA694 /* Assets.xcassets */,
 				5FA4478024708E4F005AA694 /* LaunchScreen.storyboard */,
 				5FA4478324708E4F005AA694 /* Info.plist */,
 			);
 			path = CryptoCurrency;
+			sourceTree = "<group>";
+		};
+		5FA4478B247091C7005AA694 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FA4478F2470921D005AA694 /* CryptoCurrency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FA4478C247091DF005AA694 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FA4477524708E48005AA694 /* AppDelegate.swift */,
+				5FA4477724708E48005AA694 /* SceneDelegate.swift */,
+				5FA4477924708E48005AA694 /* ViewController.swift */,
+				5FA447892470906D005AA694 /* CryptoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FA4478D247091E7005AA694 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FA447932470993C005AA694 /* CryptoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5FA4478E247091F0005AA694 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5FA44791247094F3005AA694 /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA44792247094F3005AA694 /* WebService.swift in Sources */,
+				5FA4478A2470906D005AA694 /* CryptoTableViewCell.swift in Sources */,
 				5FA4477A24708E48005AA694 /* ViewController.swift in Sources */,
+				5FA447942470993C005AA694 /* CryptoViewModel.swift in Sources */,
 				5FA4477624708E48005AA694 /* AppDelegate.swift in Sources */,
+				5FA447902470921D005AA694 /* CryptoCurrency.swift in Sources */,
 				5FA4477824708E48005AA694 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

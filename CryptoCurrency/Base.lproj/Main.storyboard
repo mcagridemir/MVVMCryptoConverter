@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JDf-2n-Typ">
+                                <rect key="frame" x="0.0" y="54" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CryptoCell" rowHeight="215" id="M12-12-kXN" customClass="CryptoTableViewCell" customModule="CryptoCurrency" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="215"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M12-12-kXN" id="cJc-SC-FFt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhj-3Y-cmR">
+                                                    <rect key="frame" x="20" y="126" width="374" height="54"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="54" id="WsE-wc-M9D"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nev-C6-xwa">
+                                                    <rect key="frame" x="20" y="43" width="374" height="56"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="374" id="MJj-Bc-cfn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mhj-3Y-cmR" secondAttribute="bottom" constant="24" id="YPV-Qe-xD3"/>
+                                                <constraint firstItem="Nev-C6-xwa" firstAttribute="trailing" secondItem="mhj-3Y-cmR" secondAttribute="trailing" id="akL-gt-yPU"/>
+                                                <constraint firstItem="Nev-C6-xwa" firstAttribute="top" secondItem="cJc-SC-FFt" secondAttribute="topMargin" constant="32" id="h2c-Zc-Ofw"/>
+                                                <constraint firstItem="Nev-C6-xwa" firstAttribute="leading" secondItem="mhj-3Y-cmR" secondAttribute="leading" id="kHt-Xm-iiV"/>
+                                                <constraint firstItem="Nev-C6-xwa" firstAttribute="leading" secondItem="cJc-SC-FFt" secondAttribute="leadingMargin" id="rlH-E6-RiR"/>
+                                                <constraint firstItem="mhj-3Y-cmR" firstAttribute="top" secondItem="Nev-C6-xwa" secondAttribute="bottom" constant="27" id="z1f-Bt-8k2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currencyText" destination="Nev-C6-xwa" id="APu-45-Zi2"/>
+                                            <outlet property="priceText" destination="mhj-3Y-cmR" id="r7I-9h-3Ce"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JDf-2n-Typ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1LF-54-Sva"/>
+                            <constraint firstItem="JDf-2n-Typ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3qL-3J-Qxf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JDf-2n-Typ" secondAttribute="bottom" constant="-10" id="lnW-Ma-H0h"/>
+                            <constraint firstItem="JDf-2n-Typ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ryP-cn-FXd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="JDf-2n-Typ" id="4vz-Kg-vTd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
